@@ -9,3 +9,7 @@ h1 {
   align-content: center;
   text-align: center;
 }
+
+#itemsBox {
+  background-color: bisque;
+}
