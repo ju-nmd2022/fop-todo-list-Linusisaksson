@@ -1,10 +1,21 @@
-const textBox = document.getElementById("#textBox");
+const textBox = document.getElementById("textBox");
+const addTaskButtonElement = document.getElementById("addTaskButton");
+const itemContainerElement = document.getElementById("itemContainer");
 
-const bodyElement = document.querySelector("body");
-const headlineElement = document.querySelector("h1");
+let tasks = [];
+console.log(tasks);
 
-const itemsBoxElement = document.createElement("div");
+function onLoadHandler() {
+  const headlineElement = document.querySelector("h1");
+  console.log(headlineElement);
+  addTaskButtonElement.addEventListener("click", addToListHandler);
+}
 
-// console.log(headlineElement);
-console.log(bodyElement);
-console.log(headlineElement);
+function addToListHandler() {
+  console.log("add to list was clicked");
+}
+
+// function addToList() {}
+
+// window.addEventListener("load", onLoadHandler);
+addTaskButtonElement.addEventListener("click", onLoadHandler);

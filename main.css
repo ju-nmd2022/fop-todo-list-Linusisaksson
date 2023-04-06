@@ -10,6 +10,10 @@ h1 {
   text-align: center;
 }
 
-#itemsBox {
+#container {
   background-color: bisque;
+}
+
+.container {
+  background-color: blue;
 }
