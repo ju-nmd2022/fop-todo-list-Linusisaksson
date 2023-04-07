@@ -1,6 +1,6 @@
 const textBox = document.getElementById("textBox");
 const addTaskButtonElement = document.getElementById("addTaskButton");
-// const itemContainerElement = document.getElementById("itemContainer");
+const itemContainerElement = document.getElementById("itemContainer");
 
 let tasks = [];
 console.log(tasks);
@@ -10,17 +10,27 @@ function addTask() {
   addTaskButtonElement.addEventListener("click", addToListHandler);
 }
 
+//creating divs with items on click
 function addToListHandler() {
   const item = document.createElement("div");
-  item.innerText = "hello";
-  const itemContainerElement = document.getElementById("itemContainer");
   item.classList.add("item-style");
   itemContainerElement.appendChild(item);
 
-  console.log("add to list was clicked");
+  //creating the text part/value
+
+  const itemText = document.createElement("p");
+  itemText.innerText = textBox.value;
+  item.appendChild(itemText);
+
+  //creating the "✔️"/complete button
+  const completeButton = document.createElement("button");
+  completeButton.innerText = "✔️";
+  item.appendChild(completeButton);
+
+  //creating the "❌"/delete button
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "❌";
+  item.appendChild(deleteButton);
 }
 
-// function addToList() {}
-
-// window.addEventListener("load", onLoadHandler);
-addTaskButtonElement.addEventListener("click", addTask);
+addTask();
