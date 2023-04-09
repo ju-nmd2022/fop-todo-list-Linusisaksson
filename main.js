@@ -10,7 +10,7 @@ function addTask() {
   addTaskButtonElement.addEventListener("click", listHandler);
 }
 
-//creating divs with items on click
+//creating divs with items on click (add tasks, complete and/or remove them)
 function listHandler() {
   const item = document.createElement("div");
   item.classList.add("item-style");
@@ -37,7 +37,7 @@ function listHandler() {
     itemContainerElement.removeChild(item);
   });
 
-  //complete task
+  //complete task changes style of the "itemText"
   completeButton.addEventListener("click", () => {
     itemText.classList.add("task-complete");
   });
