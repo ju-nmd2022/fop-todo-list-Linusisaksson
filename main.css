@@ -19,7 +19,14 @@ h1 {
 }
 
 .item-style {
+  background-color: darkcyan;
   font-family: sans-serif;
   display: flex;
   justify-content: center;
+}
+
+.task-complete {
+  font-family: sans-serif;
+  text-decoration: line-through;
+  color: darkgrey;
 }

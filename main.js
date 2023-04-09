@@ -7,11 +7,11 @@ console.log(tasks);
 function addTask() {
   const headlineElement = document.querySelector("h1");
   console.log(headlineElement);
-  addTaskButtonElement.addEventListener("click", addToListHandler);
+  addTaskButtonElement.addEventListener("click", listHandler);
 }
 
 //creating divs with items on click
-function addToListHandler() {
+function listHandler() {
   const item = document.createElement("div");
   item.classList.add("item-style");
   itemContainerElement.appendChild(item);
@@ -31,6 +31,16 @@ function addToListHandler() {
   const deleteButton = document.createElement("button");
   deleteButton.innerText = "❌";
   item.appendChild(deleteButton);
+
+  //delete task
+  deleteButton.addEventListener("click", () => {
+    itemContainerElement.removeChild(item);
+  });
+
+  //complete task
+  completeButton.addEventListener("click", () => {
+    itemText.classList.add("task-complete");
+  });
 }
 
 addTask();
