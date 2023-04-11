@@ -3,30 +3,47 @@
   align-content: center;
   text-align: center;
 }
-
+body {
+  min-height: 70em;
+  background-color: #b9c3e9;
+}
 h1 {
-  color: darkviolet;
-  align-content: center;
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 40px;
   text-align: center;
 }
 
 #container {
-  background-color: bisque;
+  background-color: #b9c3e9;
 }
 
-.container {
-  background-color: blue;
+.item-Container {
+  margin: auto;
+  width: 15em;
+  margin-top: 2em;
+  border-style: ridge;
+  border-width: 0.7em;
+  background-color: #d4dbf9;
+  min-height: 5em;
 }
-
 .item-style {
-  background-color: darkcyan;
-  font-family: sans-serif;
+  /* background-color: darkcyan; */
+  font-family: futura;
+  font-size: larger;
   display: flex;
   justify-content: center;
+  color: white;
+  text-decoration: none;
 }
 
+.complete-button {
+  margin-left: 3em;
+}
+
+/* class that is applied when a task is completed */
 .task-complete {
-  font-family: sans-serif;
+  font-family: futura;
   text-decoration: line-through;
   color: darkgrey;
 }
